@@ -1,0 +1,83 @@
+<!-- table header component -->
+<app-table-header></app-table-header>
+
+<!-- data -->
+<div class="table-wrapper">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">المستخدم</th>
+        <th scope="col">رقم التذكرة</th>
+        <th scope="col">قيمى التذكرة</th>
+        <th scope="col">السينمات</th>
+        <th scope="col">عدد الأشخاص</th>
+        <th scope="col">عدد مرات الشراء</th>
+        <th scope="col">التذكرة</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>
+          <div class="inner-data">{{ customer.id }}</div>
+        </td>
+        <td>
+          <div class="inner-data">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="mx-2" style="width: 30px" />
+            <p class="d-inline-block mb-0 mx-2">{{ customer.name }} <br> <span
+                class="phone-number">{{ customer.phone }}</span> </p>
+          </div>
+        </td>
+        <td>
+          <div class="inner-data">{{ customer.ticketno }}</div>
+        </td>
+        <td>
+          <div class="inner-data">{{ customer.cost }}</div>
+        </td>
+        <td>
+          <div class="inner-data">{{ customer.place }}</div>
+        </td>
+        <td>
+          <div class="inner-data">{{ customer.seats }}</div>
+        </td>
+        <td>
+          <div class="inner-data">{{customer.buy}}</div>
+        </td>
+        <td>
+          <div class="inner-data">
+            <span class="ticket-data">
+              <img class="d-flex" src="../../assets/images/ticket-icon.png" width="30px" alt="">
+            </span>
+            <span class="ticket-data mx-2">
+              <p class="pdf mb-0">تذكرة رقم 45.pdf <br> <span class="format">9mb . PDF</span></p>
+            </span>
+            <span class="ticket-data">
+              <img src="../../assets/images/download.png" width="16px" alt="">
+            </span>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="d-flex justify-content-between m-0 px-2 " dir="ltr">
+
+    <!-- pagenation pages -->
+    <ngb-pagination dir="rtl" [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize"
+      (pageChange)="refreshCustomers()">
+    </ngb-pagination>
+
+    <!-- pagentation dropdwon -->
+    <div class="pagenation-dropdown">
+      <span>عرض</span>
+      <select class="form-select d-inline-block mx-2" style="width: auto" [(ngModel)]="pageSize"
+        (ngModelChange)="refreshCustomers()">
+        <option [value]="2">2</option>
+        <option [value]="4">4</option>
+        <option [value]="6">6</option>
+      </select>
+      <span class="d-mob-none">من اصل {{ collectionSize }}</span>
+    </div>
+    
+  </div>
+</div>

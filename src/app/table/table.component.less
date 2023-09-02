@@ -1,0 +1,137 @@
+.table-wrapper {
+  padding: 7px;
+  border-radius: 8px;
+  border: 1px solid #F3F3F5;
+  background: #FFF;
+
+  .table {
+    thead {
+      border-radius: 6px;
+      background: rgba(227, 228, 233, 0.25);
+
+      th {
+        color: #ABAAB1;
+        font-family: Neo Sans Arabic;
+        font-size: 13.279px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23.238px;
+      }
+
+      th,
+      td,
+      tr {
+        background: transparent;
+        border-color: #F3F3F5;
+
+      }
+    }
+
+    .ticket-data {
+      display: inline-block;
+
+      .pdf {
+        color: var(--Black, #000);
+        text-align: right;
+        font-size: 11.667px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      .format {
+        color: rgba(0, 0, 0, 0.40);
+        text-align: right;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+    }
+
+    td {
+      height: 50px;
+      border-color: #F3F3F5;
+      color: #1C1C28;
+      font-size: 13.279px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 23.238px;
+
+      .inner-data {
+        height: inherit;
+        display: flex;
+        align-items: center;
+        line-height: initial;
+      }
+
+      .phone-number {
+        color: #92A1AD;
+        font-size: 9.959px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 19.918px;
+      }
+    }
+
+  }
+
+  .pagenation-dropdown,
+  select,
+  select {
+    color: #333;
+    font-family: Neo Sans Arabic;
+    font-size: 10.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+
+}
+
+@media(max-width: 450px) {
+  .table-wrapper {
+    overflow-x: scroll;
+  }
+
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .pagenation-dropdown {
+    flex-direction: row;
+  }
+
+  .d-mob-none{
+    display: none;
+  }
+}
+
+::ng-deep {
+  .pagination {
+    transform: scale(0.75) !important;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .page-link {
+    border: none;
+    background-color: transparent !important;
+  }
+
+  .page-item {
+    &.active {
+      .page-link {
+        border-radius: 4.5px;
+        background: #8A74F9 !important;
+        color: white;
+      }
+    }
+  }
+
+
+
+}

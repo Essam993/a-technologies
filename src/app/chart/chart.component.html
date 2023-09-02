@@ -1,0 +1,30 @@
+<div class="chart-wrapper">
+    <!-- chart header -->
+    <div class="row d-flex justify-content-between align-items-center chart-header">
+        <div class="col-md-6">
+            <h6>إحصائيات إستخدام القسيمة</h6>
+            <div ngbDropdown class="d-inline-block" class="filter-by-date">
+                <button type="button" class="btn btn-custom p-0" id="dropdownBasic1" ngbDropdownToggle>
+                05 يوليو , 2023 - 05 أغسطس , 2023
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem>05 يوليو , 2023 - 05 أغسطس , 2023</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1">
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-custom" id="dropdownBasic1" ngbDropdownToggle>
+              سنويا
+            </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="text-center">
+                    <button ngbDropdownItem>شهريا</button>
+                    <button ngbDropdownItem>يوميا</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chart -->
+    <canvas id="myChart" style="width: 100%; height: 280px;"></canvas>
+</div>

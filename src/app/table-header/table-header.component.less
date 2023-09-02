@@ -1,0 +1,54 @@
+.btn-custom {
+  color: #8B8B8B;
+  border: 1px solid #92A1AD66;
+  margin: 0 2px;
+  background-color: #FFFFFF;
+}
+
+.search {
+  ::-webkit-input-placeholder {
+    color: rgba(146, 161, 173, 0.40);
+    font-family: Neo Sans Arabic;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.book-btn {
+  color: white;
+  background-color: #8A74F9;
+  margin-right: 50px;
+
+  :hover {
+    border-color: #8A74F9;
+  }
+}
+
+.form-check-input:checked {
+  background-color: #8A74F9;
+
+}
+
+
+@media(max-width:450px) {
+  .new-book {
+    justify-content: space-between !important;
+
+    .form-check {
+      padding-right: 15px;
+    }
+  }
+
+  .search {
+    input {
+      width: 120px !important;
+    }
+  }
+}
